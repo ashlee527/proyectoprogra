@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primario">#2E3A8C</color>
+    <color name="primario_oscuro">#1F2766</color>
+    <color name="primario_medio">#5C6BC0</color>
+    <color name="primario_claro">#E5E8F8</color>
+    <color name="secundario">#F2A33C</color>
+
+    <color name="fondo">#F3F4F9</color>
+    <color name="superficie">#FFFFFF</color>
+    <color name="borde">#E0E3EE</color>
+
+    <color name="texto_principal">#1B1D28</color>
+    <color name="texto_secundario">#5A6072</color>
+    <color name="texto_tenue">#8A90A2</color>
+
+    <color name="codigo_fondo">#1E2233</color>
+    <color name="codigo_texto">#E6E9F2</color>
+    <color name="codigo_numero">#7C86A8</color>
+
+    <color name="consola_fondo">#141826</color>
+    <color name="consola_texto">#D7DCEA</color>
+    <color name="terminal_exito">#7BD88F</color>
+    <color name="terminal_error">#FF8A80</color>
+    <color name="terminal_info">#9AA4C0</color>
+    <color name="terminal_comando">#FFD180</color>
+
+    <color name="exito">#2E7D32</color>
+    <color name="exito_claro">#E6F4EA</color>
+    <color name="error">#C62828</color>
+    <color name="error_claro">#FDECEA</color>
+    <color name="advertencia">#B26A00</color>
+    <color name="advertencia_claro">#FFF4E0</color>
+
+    <color name="blanco">#FFFFFF</color>
+    <color name="negro">#000000</color>
+</resources>

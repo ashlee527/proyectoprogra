@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/superficie"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    app:strokeColor="@color/borde"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemLeccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:textColor="@color/texto_principal"
+                android:textSize="14sp"
+                tools:text="leccion-01-hola-mundo" />
+
+            <TextView
+                android:id="@+id/itemApertura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/texto_secundario"
+                android:textSize="11sp"
+                tools:text="01/11/2026 13:10" />
+
+            <TextView
+                android:id="@+id/itemDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/texto_tenue"
+                android:textSize="10sp"
+                tools:text="Se cumplió el objetivo COMPILAR_EXITOSO al compilar." />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/itemEstado"
+            style="@style/ChipEstado"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_chip_pendiente"
+            android:text="@string/chip_pendiente"
+            android:textColor="@color/advertencia" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

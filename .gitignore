@@ -1,0 +1,10 @@
+# Archivos generados por Android Studio y Gradle
+build/
+.gradle/
+.idea/
+local.properties
+*.iml
+*.apk
+*.zip
+captures/
+

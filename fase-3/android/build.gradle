@@ -1,0 +1,5 @@
+// Proyecto Android - Practica de codigo (Programacion 2 - Fase 3)
+// Estudiante: Ashlee Stefani Ordonez Perez - Carne 3190-25-4272
+plugins {
+    id 'com.android.application' version '8.7.3' apply false
+}

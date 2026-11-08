@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "leccion-01-hola-mundo",
+    "titulo": "01 · Hola mundo",
+    "objetivo": "COMPILAR_EXITOSO",
+    "rutaOrigen": "assets/demo/leccion-01.md",
+    "fechaImportacion": "2026-11-01T09:00:00",
+    "recursos": [],
+    "contenidoMd": "# 01 · Hola mundo\n\nPrimer programa del curso. Escriba una clase con el método `main` y muestre un mensaje en la consola.\n\n```java\npublic class HolaMundo {\n    public static void main(String[] args) {\n        System.out.println(\"Hola, Programacion 2\");\n    }\n}\n```\n\n**Objetivo:** compilar sin errores. Presione Compilar y observe el mensaje de éxito en la consola."
+  },
+  {
+    "id": 2,
+    "nombre": "leccion-02-errores-compilacion",
+    "titulo": "02 · Errores de compilación",
+    "objetivo": "COMPILAR_CON_ERROR",
+    "rutaOrigen": "assets/demo/leccion-02.md",
+    "fechaImportacion": "2026-11-01T09:05:00",
+    "recursos": [],
+    "contenidoMd": "# 02 · Errores de compilación\n\nEl compilador de Java informa la línea y el motivo de cada error. Este ejemplo omite el punto y coma final.\n\n```java\npublic class ErrorSintaxis {\n    public static void main(String[] args) {\n        int edad = 20\n        System.out.println(\"Edad: \" + edad);\n    }\n}\n```\n\n**Objetivo:** compilar con error. La consola debe mostrar el mensaje del compilador y la lección se marca como completada."
+  },
+  {
+    "id": 3,
+    "nombre": "leccion-03-division-cero",
+    "titulo": "03 · División entre cero",
+    "objetivo": "EJECUTAR_CON_ERROR",
+    "rutaOrigen": "assets/demo/leccion-03.md",
+    "fechaImportacion": "2026-11-01T09:10:00",
+    "recursos": [],
+    "contenidoMd": "# 03 · División entre cero\n\nLas excepciones en tiempo de ejecución detienen el programa. Observe el rastro de la pila en la consola.\n\n```java\npublic class DivisionCero {\n    public static void main(String[] args) {\n        int numerador = 10;\n        int denominador = 0;\n        System.out.println(\"Resultado: \" + (numerador / denominador));\n    }\n}\n```\n\n**Objetivo:** ejecutar con error. Compile primero y luego presione Ejecutar."
+  },
+  {
+    "id": 4,
+    "nombre": "leccion-04-calculadora",
+    "titulo": "04 · Calculadora básica",
+    "objetivo": "EJECUTAR_EXITOSO",
+    "rutaOrigen": "assets/demo/leccion-04.md",
+    "fechaImportacion": "2026-11-01T09:15:00",
+    "recursos": [],
+    "contenidoMd": "# 04 · Calculadora básica\n\nPractique operaciones aritméticas y salida formateada. El programa debe terminar sin errores.\n\n```java\npublic class Calculadora {\n    public static void main(String[] args) {\n        int a = 18;\n        int b = 5;\n        System.out.println(\"Suma: \" + (a + b));\n        System.out.println(\"Resta: \" + (a - b));\n        System.out.println(\"Producto: \" + (a * b));\n        System.out.println(\"Division: \" + ((double) a / b));\n    }\n}\n```\n\n**Objetivo:** ejecutar con éxito. Compile, ejecute y revise la salida en la consola."
+  }
+]

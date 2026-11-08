@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primario"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_atras"
+        app:navigationIconTint="@color/blanco"
+        app:subtitle="@string/historial_subtitulo"
+        app:subtitleTextColor="#C7CCF5"
+        app:title="@string/historial_titulo"
+        app:titleTextColor="@color/blanco" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/superficie"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/resumenHistorial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/historial_cargando"
+            android:textColor="@color/texto_secundario"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonActualizar"
+            style="@style/BotonSecundario"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/actualizar"
+            android:textColor="@color/primario"
+            app:icon="@drawable/ic_recargar"
+            app:iconTint="@color/primario"
+            app:strokeColor="@color/primario" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/textoVacio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/historial_cargando"
+            android:textColor="@color/texto_tenue"
+            android:textSize="13sp" />
+
+        <ProgressBar
+            android:id="@+id/progresoHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/primario"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/superficie"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonCerrar"
+            style="@style/BotonAccion"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="@string/cerrar"
+            android:textColor="@color/blanco"
+            app:backgroundTint="@color/primario"
+            app:icon="@drawable/ic_cerrar"
+            app:iconTint="@color/blanco" />
+    </LinearLayout>
+</LinearLayout>

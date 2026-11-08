@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primario"
+        android:elevation="4dp"
+        app:contentInsetStart="16dp"
+        app:subtitle="@string/app_subtitulo"
+        app:subtitleTextColor="#C7CCF5"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/blanco" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/altura_barra_menu"
+        android:background="@color/superficie"
+        android:elevation="2dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <TextView
+                android:id="@+id/menuLeccion"
+                style="@style/MenuBarraItem"
+                android:drawableStart="@drawable/ic_leccion"
+                android:text="@string/menu_leccion" />
+
+            <TextView
+                android:id="@+id/menuConfiguracion"
+                style="@style/MenuBarraItem"
+                android:drawableStart="@drawable/ic_configuracion"
+                android:text="@string/menu_configuracion" />
+
+            <TextView
+                android:id="@+id/menuHistorial"
+                style="@style/MenuBarraItem"
+                android:drawableStart="@drawable/ic_historial"
+                android:text="@string/menu_historial" />
+
+            <TextView
+                android:id="@+id/menuAyuda"
+                style="@style/MenuBarraItem"
+                android:drawableStart="@drawable/ic_ayuda"
+                android:text="@string/menu_ayuda" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/superficie"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tituloLeccionActiva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="@string/titulo_sin_leccion"
+                android:textColor="@color/texto_principal"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/subtituloLeccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/subtitulo_sin_leccion"
+                android:textColor="@color/texto_secundario"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chipObjetivo"
+                style="@style/ChipEstado"
+                android:background="@drawable/bg_chip_objetivo"
+                android:text="@string/chip_sin_objetivo"
+                android:textColor="@color/primario" />
+
+            <TextView
+                android:id="@+id/chipEstado"
+                style="@style/ChipEstado"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_chip_pendiente"
+                android:text="@string/chip_pendiente"
+                android:textColor="@color/advertencia" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/superficie"
+            app:cardCornerRadius="@dimen/radio_tarjeta"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/borde"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TituloSeccion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lecciones_disponibles" />
+
+                    <TextView
+                        android:id="@+id/contadorLecciones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 lecciones"
+                        android:textColor="@color/texto_tenue"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinnerLecciones"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/primario"
+                        android:contentDescription="@string/lecciones_disponibles"
+                        android:spinnerMode="dropdown" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonAbrirLeccion"
+                        style="@style/BotonSecundario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/abrir"
+                        android:textColor="@color/primario"
+                        app:icon="@drawable/ic_leccion"
+                        app:iconTint="@color/primario"
+                        app:strokeColor="@color/primario" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tituloLeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/texto_principal"
+                            android:textSize="17sp"
+                            tools:text="01 · Hola mundo" />
+
+                        <TextView
+                            android:id="@+id/objetivoLeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/primario_medio"
+                            android:textSize="11sp"
+                            tools:text="Objetivo: Compilar sin errores" />
+
+                        <TextView
+                            android:id="@+id/contenidoLeccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="3dp"
+                            android:text="@string/contenido_vacio"
+                            android:textColor="@color/texto_secundario"
+                            android:textIsSelectable="true"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.25"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/codigo_fondo"
+            app:cardCornerRadius="@dimen/radio_tarjeta"
+            app:cardElevation="3dp"
+            app:strokeColor="#2E3550"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#262B40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/editor_titulo"
+                        android:textColor="@color/blanco"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/nombreClase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:fontFamily="monospace"
+                        android:text="@string/sin_compilar"
+                        android:textColor="@color/terminal_info"
+                        android:textSize="10sp" />
+
+                    <ImageButton
+                        android:id="@+id/botonCopiarCodigo"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/copiar_codigo"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_copiar"
+                        app:tint="#C7CCF5" />
+                </LinearLayout>
+
+                <gt.edu.umg.practicacodigo.vista.EditorCodigoView
+                    android:id="@+id/editor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="8dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonCompilar"
+                        style="@style/BotonAccion"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="@string/compilar"
+                        android:textColor="@color/blanco"
+                        app:backgroundTint="@color/primario_medio"
+                        app:icon="@drawable/ic_compilar"
+                        app:iconTint="@color/blanco" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonEjecutar"
+                        style="@style/BotonAccion"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="@string/ejecutar"
+                        android:textColor="@color/blanco"
+                        app:backgroundTint="@color/exito"
+                        app:icon="@drawable/ic_ejecutar"
+                        app:iconTint="@color/blanco" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ayudaJdk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/ayuda_jdk_inicial"
+                    android:textColor="@color/terminal_info"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_consola"
+            app:cardBackgroundColor="@color/consola_fondo"
+            app:cardCornerRadius="@dimen/radio_tarjeta"
+            app:cardElevation="2dp"
+            app:strokeColor="#252B3D"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="2dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:contentDescription="@string/consola_titulo"
+                        android:src="@drawable/ic_terminal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/consola_titulo"
+                        android:textColor="@color/blanco"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/estadoConexion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:text="@string/estado_conectando"
+                        android:textColor="@color/terminal_info"
+                        android:textSize="9sp" />
+
+                    <ImageButton
+                        android:id="@+id/botonLimpiarConsola"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/limpiar_consola"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_limpiar"
+                        app:tint="@color/terminal_info" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scrollbars="vertical">
+
+                    <TextView
+                        android:id="@+id/consola"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:lineSpacingExtra="2dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/consola_texto"
+                        android:textIsSelectable="true"
+                        android:textSize="10sp" />
+                </ScrollView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>

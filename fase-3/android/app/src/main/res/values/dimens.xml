@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="espacio_xs">4dp</dimen>
+    <dimen name="espacio_s">8dp</dimen>
+    <dimen name="espacio_m">12dp</dimen>
+    <dimen name="espacio_l">16dp</dimen>
+    <dimen name="radio_tarjeta">14dp</dimen>
+    <dimen name="altura_consola">138dp</dimen>
+    <dimen name="altura_barra_menu">48dp</dimen>
+    <dimen name="ancho_numeros">40dp</dimen>
+</resources>

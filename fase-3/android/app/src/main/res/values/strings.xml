@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Práctica de Código</string>
+    <string name="app_subtitulo">Programación 2 · Fase 3</string>
+
+    <string name="menu_leccion">Lección</string>
+    <string name="menu_configuracion">Configuración</string>
+    <string name="menu_historial">Historial</string>
+    <string name="menu_ayuda">Ayuda</string>
+
+    <string name="lecciones_disponibles">Lecciones disponibles</string>
+    <string name="abrir">Abrir</string>
+    <string name="seleccione_leccion">Seleccione una lección…</string>
+
+    <string name="titulo_sin_leccion">Ninguna lección abierta</string>
+    <string name="subtitulo_sin_leccion">Seleccione una lección y presione Abrir</string>
+    <string name="chip_sin_objetivo">SIN OBJETIVO</string>
+    <string name="chip_pendiente">PENDIENTE</string>
+    <string name="chip_completada">COMPLETADA</string>
+
+    <string name="editor_titulo">Editor de código</string>
+    <string name="sin_compilar">Sin compilar</string>
+    <string name="compilar">Compilar</string>
+    <string name="ejecutar">Ejecutar</string>
+    <string name="ayuda_jdk_inicial">Configure el JDK del servidor para compilar.</string>
+    <string name="ayuda_jdk_listo">Listo para compilar con el JDK del servidor.</string>
+    <string name="ayuda_demo">Modo demostración: la compilación requiere la API.</string>
+
+    <string name="consola_titulo">Consola</string>
+    <string name="estado_conectando">Conectando…</string>
+    <string name="limpiar_consola">Limpiar consola</string>
+    <string name="copiar_codigo">Copiar código de ejemplo al editor</string>
+
+    <string name="contenido_vacio">Seleccione una lección del listado y presione Abrir para ver su contenido, objetivo y código de ejemplo.</string>
+
+    <string name="historial_titulo">Historial de sesión</string>
+    <string name="historial_subtitulo">Registros guardados en la API REST</string>
+    <string name="historial_cargando">Cargando historial…</string>
+    <string name="historial_vacio">No hay registros de historial. Abra una lección para crear el primero.</string>
+    <string name="historial_error">No se pudo cargar el historial.</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="reintentar">Reintentar</string>
+
+    <string name="ayuda_titulo">Ayuda</string>
+    <string name="ayuda_subtitulo">Guía rápida de la aplicación</string>
+
+    <string name="dialogo_jdk_titulo">Configuración del entorno</string>
+    <string name="dialogo_jdk_ruta">Ruta del JDK 25 en el servidor</string>
+    <string name="dialogo_jdk_ruta_ayuda">La ruta se guarda en la API y la usa guali-dev.jar para localizar javac y java. Ejemplo: C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot</string>
+    <string name="dialogo_api_url">Dirección de la API REST</string>
+    <string name="dialogo_api_url_ayuda">Emulador: http://10.0.2.2:8080 · Dispositivo físico: http://IP_DEL_EQUIPO:8080</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="verificar">Verificar</string>
+    <string name="estado_jdk_consultando">Consultando el estado del JDK…</string>
+
+    <string name="menu_abrir_leccion">Abrir lección</string>
+    <string name="menu_cerrar_leccion">Cerrar lección</string>
+    <string name="menu_copiar_codigo">Copiar código de ejemplo</string>
+    <string name="menu_configurar_jdk">Configurar JDK</string>
+    <string name="menu_direccion_api">Dirección de la API</string>
+    <string name="menu_recargar">Recargar lecciones</string>
+    <string name="menu_ver_historial">Ver historial</string>
+    <string name="menu_ayuda_rapida">Ayuda de la aplicación</string>
+    <string name="menu_acerca_de">Acerca de</string>
+
+    <string name="acerca_titulo">Acerca de Práctica de Código</string>
+    <string name="acerca_texto">Práctica de Código · Fase 3\n\nEstudiante: Ashlee Stefani Ordoñez Pérez\nCarné: 3190-25-4272\nCurso: Programación 2\nUniversidad Mariano Gálvez de Guatemala\n\nCliente Android que consume la API REST de la Fase 2. La compilación y ejecución se realizan en el servidor con guali-dev.jar y el JDK 25.</string>
+
+    <string name="objetivo_etiqueta">Objetivo: %1$s</string>
+    <string name="leccion_activa_etiqueta">Lección activa: %1$s</string>
+    <string name="registros_etiqueta">%1$d registros · %2$d completadas</string>
+
+    <string name="error_sin_leccion">Abra una lección antes de continuar.</string>
+    <string name="error_sin_codigo">Escriba o copie código Java en el editor.</string>
+    <string name="error_compilar_primero">Compile el código actual antes de ejecutarlo.</string>
+    <string name="error_api">No se pudo conectar con la API REST.</string>
+    <string name="aviso_jdk">Configure el JDK del servidor desde Configuración &gt; Configurar JDK.</string>
+    <string name="aviso_demo">El catálogo se muestra en modo demostración. Inicie la API de la Fase 2 para compilar y ejecutar.</string>
+    <string name="leccion_completada_titulo">Objetivo alcanzado</string>
+    <string name="leccion_completada_mensaje">¡Lección completada!\n\n%1$s\n\nEl estado quedó registrado en el historial.</string>
+    <string name="sin_conexion_demo">Sin conexión · demo</string>
+    <string name="api_conectada">API conectada</string>
+
+    <string name="jdk_configurado">JDK configurado: %1$s</string>
+    <string name="jdk_no_configurado">JDK no configurado en el servidor.</string>
+</resources>
